@@ -36,8 +36,9 @@ drop table NOTATIONS cascade constraints;
 create table ASSOCIATIONS
 (
     NUMERO_ASSOCIATION		NUMBER(3)              not null,
-    NOM_ASSOCIATION		CHAR(20)               not null,
+    NOM_ASSOCIATION		    CHAR(20)               not null,
     DATE_DE_CREATION		DATE                   not null,
+    DESCRIPTION             VARCHAR2(100)                      ,
     constraint pk_associations primary key (NUMERO_ASSOCIATION)
 );
 
@@ -91,8 +92,8 @@ create table ADHESIONS
 create table NEWS
 (
     NUMERO_NEWS			NUMBER(3)		not null,
-    TITRE_NEWS			CHAR(20)		not null,
-    TEXTE_NEWS			CHAR(20)			,
+    TITRE_NEWS			CHAR(30)		not null,
+    TEXTE_NEWS			VARCHAR2(100)			,
     DATE_DE_CREATION_NEWS	DATE				,
     NUMERO_ADHERENT		CHAR(20)			,
     constraint pk_news primary key (NUMERO_NEWS)
@@ -106,7 +107,7 @@ create table EVENEMENTS
 (
     NUMERO_EVENEMENT		NUMBER(3)		not null,
     TITRE			char(20)		not null,
-    DESCRIPTION			char(20)			,
+    DESCRIPTION			varchar2(100)			,
     COUT			NUMBER(3)			,
     LIEU			char(20)			,
     NOMBRE_DE_PLACES		NUMBER(3)			,

@@ -2,19 +2,19 @@
 --    suppression des donnees
 -- ============================================================
 
-delete from ASSOCIATIONS ;
-delete from ADHERENTS ;
-delete from PERSONNES ;
-delete from EVENEMENTS ;
-delete from NEWS ;
 delete from FINANCEMENTS ;
 delete from FINANCEURS ;
-delete from ADHESIONS ;
 delete from ORGANISATIONS ;
 delete from GESTIONS ;
 delete from NOTATIONS ;
 delete from COMMENTAIRES ;
+delete from NEWS ;
+delete from ADHESIONS ;
+delete from ADHERENTS ;
 delete from PARTICIPATIONS ;
+delete from PERSONNES ;
+delete from EVENEMENTS ;
+delete from ASSOCIATIONS ;
 
 commit ;
 
@@ -24,16 +24,31 @@ commit ;
 
 -- ASSOCIATIONS
 
-insert into ASSOCIATIONS values (  1 , 'BDE'     , 'JUIN-1920' , 'GENERAL'  ) ;
-insert into ASSOCIATIONS values (  2 , 'BDS'     , 'JUIN-1980' , 'SPORTS'  ) ;
-insert into ASSOCIATIONS values (  3 , 'BDA'     , 'JUIN-2000' , 'ARTS'      ) ;
-insert into ASSOCIATIONS values (  4 , 'BAR'     , 'JUIN-2005' , 'BOISSONS'  ) ;
-insert into ASSOCIATIONS values (  5 , 'AIRTEL'  , 'JUIN-2003' , 'ALTERNANTS'  ) ;
-insert into ASSOCIATIONS values (  6 , 'EIRBWARE', 'JUIN-2005' , 'TECHNOLOGIE'  ) ;
-insert into ASSOCIATIONS values (  7 , 'ZIK'     , 'JUIN-1990' , 'MUSIQUE'  ) ;
-insert into ASSOCIATIONS values (  8 , 'PIXEIRB' , 'JUIN-2009' , 'PHOTOS'  ) ;
-insert into ASSOCIATIONS values (  9 , 'OENO'    , 'JUIN-2015' , 'VINS'  ) ;
-insert into ASSOCIATIONS values ( 10 , 'CINEIRB' , 'JUIN-2010' , 'FILMS'  ) ;
+insert into ASSOCIATIONS values (  1 , 'BDE'     , '25-JUN-20' , 'GENERAL'  ) ;
+insert into ASSOCIATIONS values (  2 , 'BDS'     , '10-JUN-80' , 'SPORTS'  ) ;
+insert into ASSOCIATIONS values (  3 , 'BDA'     , '15-JUN-00' , 'ARTS'      ) ;
+insert into ASSOCIATIONS values (  4 , 'BAR'     , '12-JUN-05' , 'BOISSONS'  ) ;
+insert into ASSOCIATIONS values (  5 , 'AIRTEL'  , '02-JUN-03' , 'ALTERNANTS' ) ;
+insert into ASSOCIATIONS values (  6 , 'EIRBWARE', '09-JUN-05' , 'TECHNOLOGIE') ;
+insert into ASSOCIATIONS values (  7 , 'ZIK'     , '27-JUN-90' , 'MUSIQUE'  ) ;
+insert into ASSOCIATIONS values (  8 , 'PIXEIRB' , '30-JUN-09' , 'PHOTOS'  ) ;
+insert into ASSOCIATIONS values (  9 , 'OENO'    , '26-JUN-15' , 'VINS'  ) ;
+insert into ASSOCIATIONS values ( 10 , 'CINEIRB' , '19-JUN-10' , 'FILMS'  ) ;
+
+commit ;
+
+-- EVENEMENTS 
+
+insert into EVENEMENTS values (1, 'CONCERT DE NOEL'  , 'CONCERT'           , 4 , 'ENSEIRB', 100);
+insert into EVENEMENTS values (2, 'OLINP'            , 'SPORT'             , 3 , 'ENSEIRB', 300);
+insert into EVENEMENTS values (3, 'GALA'             , 'REMISE DE DIPLOMES', 2 , 'CHATEAU', 200);
+insert into EVENEMENTS values (4, 'KRACH BOURSIER'   , 'SOIREE'            , 1 , 'BAR'    , 150);
+insert into EVENEMENTS values (5, 'WEI'              , 'INTEGRATION'       , 9 , 'CAMPING', 500);
+insert into EVENEMENTS values (6, 'WEN'              , 'NATURE'            , 8 , 'CAMPAGNE', 50);
+insert into EVENEMENTS values (7, 'WIS'              , 'SPORT INTEGRATION' , 6 , 'IBIZA'  , 100);
+insert into EVENEMENTS values (8, 'WES'              , 'SKI'               , 7 , 'SERRE CHEVALIER', 100);
+insert into EVENEMENTS values (9, 'SOIREE BARBAPAPA' , 'BARBAPAPA'         , 10, 'BAR'    , 150);
+insert into EVENEMENTS values (10, 'DEPART 3A'        , 'ADIEU'             , 5, 'ENSEIRB' , 200);
 
 commit ;
 
@@ -46,54 +61,9 @@ insert into PERSONNES values (  4 , 'AYMARD'  , 'JEAN'     , 'JAYMARD@ENSEIRB.FR
 insert into PERSONNES values (  5 , 'ZOLE'  , 'CAMILLE'     , 'CZOLE@ENSEIRB.FR'    , 'MATMECA' , 2017, 'CZOLE', 'ENFERMEE' ) ;
 insert into PERSONNES values (  6 , 'TERIEUR'  , 'ALAIN'     , 'ATERIEUR@ENSEIRB.FR'    , 'ELEC' , 2022, 'ATERIEUR', 'INTERIEUR' ) ;
 insert into PERSONNES values (  7 , 'KAN'  , 'JERRY'     , 'JKAN@ENSEIRB.FR'    , 'ELEC' , 2010, 'JKAN', 'BIDON' ) ;
-insert into PERSONNES values (  8 , 'BAR' , 'LENNY'       , 'LBAR@ENSEIRB.FR'   , 2025,  'LBAR', 'BUSTE' ) ;
+insert into PERSONNES values (  8 , 'BAR' , 'LENNY'       , 'LBAR@ENSEIRB.FR'   , 'INFO', 2025,  'LBAR', 'BUSTE' ) ;
 insert into PERSONNES values (  9 , 'VERSAIRE'  , 'ANNIE'     , 'AVERSAIRE@ENSEIRB.FR'    , 'TELE' , 2020, 'AVERSAIRE', 'BONNEFETE' ) ;
-insert into PERSONNES values ( 10 , 'CONDA'     , 'ANNA'       , 'ACONDA@ENSEIRB.FR' , 2010, 'ACONDA', 'SERPENT' ) ;
-
-commit ;
-
--- ADHESIONS 
-
-insert into ADHESIONS values (  1 , 5 , 'SEPT-2021', 'OUI' );
-insert into ADHESIONS values (  2 , 9 , 'SEPT-2016', 'OUI' );
-insert into ADHESIONS values (  3 , 1 , 'SEPT-2019', 'OUI' );
-insert into ADHESIONS values (  4 , 2 , 'SEPT-2019', 'NON' );
-insert into ADHESIONS values (  5 , 10, 'SEPT-2021', 'NON' );
-insert into ADHESIONS values (  6 , 5 , 'SEPT-2016', 'NON' );
-insert into ADHESIONS values (  7 , 7 , 'SEPT-2020', 'OUI' );
-insert into ADHESIONS values (  8 , 6 , 'SEPT-2019', 'NON' );
-insert into ADHESIONS values (  9 , 4 , 'SEPT-2021', 'NON' );
-insert into ADHESIONS values ( 10 , 4 , 'SEPT-2016', 'OUI' );
-
-commit ;
-
--- NEWS 
-
-insert into NEWS values (  1 , 'PREZ VIRE' , 'LE PREZ EST MORT', '22-MAI-2015', 5 );
-insert into NEWS values (  2 , 'NOUVEAU PREZ' , 'REMPLACEMENT RAPIDE', '23-MAI-2015', 10 );
-insert into NEWS values (  3 , 'NOUVEAU BUREAU' , 'CHANGEMENT DE TOUT LE BUREAU', '24-MAI-2015', 5 );
-insert into NEWS values (  4 , 'VOL DE LA TRESORERIE' , 'LE PREZ SE BARRE AVEC LARGENT', '31-MAI-2015', 4 );
-insert into NEWS values (  5 , 'NOUVEAU PREZ' , 'ELU ALEATOIREMENT', '1-JUIN-2015', 6 );
-insert into NEWS values (  6 , 'INEFFICACITE' , 'LASSOCIATION DEVIENT NULLE', '10-JUIN-2015', 1 );
-insert into NEWS values (  7 , 'COUP DETAT' , 'LE PREZ SE FAIT DECAPITER', '13-JUIN-2015', 10 );
-insert into NEWS values (  8 , 'REGIME DEMOCRATIQUE' , 'DEMOCRATIE OUI', '27-JUIN-2015', 1 );
-insert into NEWS values (  9 , 'NAISSANCE' , 'LE PREZ A UN FILS', '24-JANV-2016', 7 );
-insert into NEWS values ( 10 , 'ACCIDENT DE TRAIN' , 'LE PREZ EST MORT', '22-MAI-2015', 2 );
-
-commit ;
-
--- COMMENTAIRES 
-
-insert into COMMENTAIRES values (  1 , 6  );
-insert into COMMENTAIRES values (  2 , 8  );
-insert into COMMENTAIRES values (  3 , 10 );
-insert into COMMENTAIRES values (  4 , 1  );
-insert into COMMENTAIRES values (  5 , 10 );
-insert into COMMENTAIRES values (  6 , 4  );
-insert into COMMENTAIRES values (  7 , 3  );
-insert into COMMENTAIRES values (  8 , 2  );
-insert into COMMENTAIRES values (  9 , 5  );
-insert into COMMENTAIRES values ( 10 , 6  );
+insert into PERSONNES values ( 10 , 'CONDA'     , 'ANNA'       , 'ACONDA@ENSEIRB.FR' , 'ELEC', 2010, 'ACONDA', 'SERPENT' ) ;
 
 commit ;
 
@@ -109,6 +79,67 @@ insert into PARTICIPATIONS values (  7 , 3  , 10);
 insert into PARTICIPATIONS values (  8 , 2  , 2 );
 insert into PARTICIPATIONS values (  9 , 5  , 2 );
 insert into PARTICIPATIONS values ( 10 , 6  , 6 );
+
+commit ;
+
+-- ADHERENTS 
+
+insert into ADHERENTS values (  1  , 5  , 4);
+insert into ADHERENTS values (  2  , 5  , 3);
+insert into ADHERENTS values (  3  , 0  , 2);
+insert into ADHERENTS values (  4  , 5  , 1);
+insert into ADHERENTS values (  5  , 15 , 9);
+insert into ADHERENTS values (  6  , 15 , 8);
+insert into ADHERENTS values (  7  , 7  , 6);
+insert into ADHERENTS values (  8  , 7  , 7);
+insert into ADHERENTS values (  9  , 20 , 10);
+insert into ADHERENTS values (  10 , 25 , 5);
+
+commit ;
+
+
+-- ADHESIONS 
+
+insert into ADHESIONS values (  1 , 5 , '10-SEP-21', 'OUI' );
+insert into ADHESIONS values (  2 , 9 , '15-SEP-16', 'OUI' );
+insert into ADHESIONS values (  3 , 1 , '17-SEP-19', 'OUI' );
+insert into ADHESIONS values (  4 , 2 , '17-SEP-19', 'NON' );
+insert into ADHESIONS values (  5 , 10, '01-SEP-21', 'NON' );
+insert into ADHESIONS values (  6 , 5 , '02-SEP-16', 'NON' );
+insert into ADHESIONS values (  7 , 7 , '09-SEP-20', 'OUI' );
+insert into ADHESIONS values (  8 , 6 , '14-SEP-19', 'NON' );
+insert into ADHESIONS values (  9 , 4 , '29-SEP-21', 'NON' );
+insert into ADHESIONS values ( 10 , 4 , '21-SEP-16', 'OUI' );
+
+commit ;
+
+-- NEWS 
+
+insert into NEWS values (  1 , 'PREZ VIRE' , 'LE PREZ EST MORT', '22-MAY-15', 5 );
+insert into NEWS values (  2 , 'NOUVEAU PREZ' , 'REMPLACEMENT RAPIDE', '23-MAY-15', 10 );
+insert into NEWS values (  3 , 'NOUVEAU BUREAU' , 'CHANGEMENT DE TOUT LE BUREAU', '24-MAY-15', 5 );
+insert into NEWS values (  4 , 'VOL DE LA TRESORERIE' , 'LE PREZ SE BARRE AVEC LARGENT', '31-MAY-15', 4 );
+insert into NEWS values (  5 , 'NOUVEAU PREZ' , 'ELU ALEATOIREMENT', '1-JUN-15', 6 );
+insert into NEWS values (  6 , 'INEFFICACITE' , 'LASSOCIATION DEVIENT NULLE', '10-JUN-15', 1 );
+insert into NEWS values (  7 , 'COUP DETAT' , 'LE PREZ SE FAIT DECAPITER', '13-JUN-15', 10 );
+insert into NEWS values (  8 , 'REGIME DEMOCRATIQUE' , 'DEMOCRATIE OUI', '27-JUN-15', 1 );
+insert into NEWS values (  9 , 'NAISSANCE' , 'LE PREZ A UN FILS', '24-JAN-16', 7 );
+insert into NEWS values ( 10 , 'ACCIDENT DE TRAIN' , 'LE PREZ EST MORT', '22-MAY-15', 2 );
+
+commit ;
+
+-- COMMENTAIRES 
+
+insert into COMMENTAIRES values (  1 , 6  );
+insert into COMMENTAIRES values (  2 , 8  );
+insert into COMMENTAIRES values (  3 , 10 );
+insert into COMMENTAIRES values (  4 , 1  );
+insert into COMMENTAIRES values (  5 , 10 );
+insert into COMMENTAIRES values (  6 , 4  );
+insert into COMMENTAIRES values (  7 , 3  );
+insert into COMMENTAIRES values (  8 , 2  );
+insert into COMMENTAIRES values (  9 , 5  );
+insert into COMMENTAIRES values ( 10 , 6  );
 
 commit ;
 
@@ -142,43 +173,18 @@ insert into GESTIONS values ( 10 , 6  );
 
 commit ;
 
--- FINANCEMENTS 
-
-insert into FINANCEMENTS values (  1 , 1  );
-insert into FINANCEMENTS values (  2 , 2  );
-insert into FINANCEMENTS values (  3 , 2  );
-insert into FINANCEMENTS values (  4 , 1  );
-insert into FINANCEMENTS values (  5 , 4  );
-
-commit ;
-
 -- ORGANISATIONS 
 
-insert into ORGANISATIONS values (  1  , 1  , '20-JANV-2016', '21-JANV-2016');
-insert into ORGANISATIONS values (  2  , 2  , '10-FEVR-2018', '11-FEVR-2016');
-insert into ORGANISATIONS values (  3  , 2  , '19-MAI-2016', '25-MAI-2016');
-insert into ORGANISATIONS values (  4  , 1  , '4-JUIN-2017', '5-JUIN-2016');
-insert into ORGANISATIONS values (  5  , 3  , '5-JUIN-2018', '6-JUIN-2016');
-insert into ORGANISATIONS values (  6  , 4  , '31-SEPT-2013', 'JANV-2016');
-insert into ORGANISATIONS values (  7  , 5  , '10-JANV-2010', '15-JANV-2016');
-insert into ORGANISATIONS values (  8  , 7  , '22-MARS-2018', '24-MARS-2016');
-insert into ORGANISATIONS values (  9  , 9  , '7-JUIL-2015', '9-JUIL-2016');
-insert into ORGANISATIONS values (  10 , 8  , '19-MAI-2016', '20-MAI-2016');
-
-commit ;
-
--- ADHERENTS 
-
-insert into ADHERENTS values (  1  , 5  , 4);
-insert into ADHERENTS values (  2  , 5  , 3);
-insert into ADHERENTS values (  3  , 0  , 2);
-insert into ADHERENTS values (  4  , 5  , 1);
-insert into ADHERENTS values (  5  , 15 , 9);
-insert into ADHERENTS values (  6  , 15 , 8);
-insert into ADHERENTS values (  7  , 7  , 6);
-insert into ADHERENTS values (  8  , 7  , 7);
-insert into ADHERENTS values (  9  , 20 , 10);
-insert into ADHERENTS values (  10 , 25 , 5);
+insert into ORGANISATIONS values (  1  , 1  , '20-JAN-16', '21-JAN-16');
+insert into ORGANISATIONS values (  2  , 2  , '10-FEB-16', '11-FEB-17');
+insert into ORGANISATIONS values (  3  , 2  , '19-MAY-16', '25-MAY-16');
+insert into ORGANISATIONS values (  4  , 1  , '4-JUN-16', '05-JUN-17');
+insert into ORGANISATIONS values (  5  , 3  , '5-JUN-16', '06-JUN-18');
+insert into ORGANISATIONS values (  6  , 4  , '30-SEP-13', '08-JAN-16');
+insert into ORGANISATIONS values (  7  , 5  , '10-JAN-10', '15-JAN-16');
+insert into ORGANISATIONS values (  8  , 7  , '22-MAR-18', '24-MAR-18');
+insert into ORGANISATIONS values (  9  , 9  , '7-JUL-15', '09-JUL-16');
+insert into ORGANISATIONS values (  10 , 8  , '19-MAY-16', '20-MAY-16');
 
 commit ;
 
@@ -192,18 +198,13 @@ insert into FINANCEURS values (  5  , 'MCDONALDS'        );
 
 commit ;
 
--- EVENEMENTS 
+-- FINANCEMENTS 
 
-insert into EVENEMENTS values ( 'CONCERT DE NOEL'  , 'CONCERT'           , 4 , 'ENSEIRB', 100);
-insert into EVENEMENTS values ( 'OLINP'            , 'SPORT'             , 3 , 'ENSEIRB', 300);
-insert into EVENEMENTS values ( 'GALA'             , 'REMISE DE DIPLOMES', 2 , 'CHATEAU', 200);
-insert into EVENEMENTS values ( 'KRACH BOURSIER'   , 'SOIREE'            , 1 , 'BAR'    , 150);
-insert into EVENEMENTS values ( 'WEI'              , 'INTEGRATION'       , 9 , 'CAMPING', 500);
-insert into EVENEMENTS values ( 'WEN'              , 'NATURE'            , 8 , 'CAMPAGNE', 50);
-insert into EVENEMENTS values ( 'WIS'              , 'SPORT INTEGRATION' , 6 , 'IBIZA'  , 100);
-insert into EVENEMENTS values ( 'WES'              , 'SKI'               , 7 , 'SERRE CHEVALIER', 100);
-insert into EVENEMENTS values ( 'SOIREE BARBAPAPA' , 'BARBAPAPA'         , 10, 'BAR'    , 150);
-insert into EVENEMENTS values ( 'DEPART 3A'        , 'ADIEU'             , 5, 'ENSEIRB' , 200);
+insert into FINANCEMENTS values (  1 , 1  );
+insert into FINANCEMENTS values (  2 , 2  );
+insert into FINANCEMENTS values (  3 , 2  );
+insert into FINANCEMENTS values (  4 , 1  );
+insert into FINANCEMENTS values (  5 , 4  );
 
 commit ;
 
@@ -217,22 +218,22 @@ select count(*),'= 10 ?','PERSONNES' from PERSONNES
 union
 select count(*),'= 10 ?','ADHESIONS' from ADHESIONS 
 union
-select count(*),'= 10 ?','NEWS' from NEWS ;
+select count(*),'= 10 ?','NEWS' from NEWS 
 union
-select count(*),'= 10 ?','COMMENTAIRES' from COMMENTAIRES ;
+select count(*),'= 10 ?','COMMENTAIRES' from COMMENTAIRES 
 union
-select count(*),'= 10 ?','PARTICIPATIONS' from PARTICIPATIONS ;
+select count(*),'= 10 ?','PARTICIPATIONS' from PARTICIPATIONS 
 union
-select count(*),'= 10 ?','NOTATIONS' from NOTATIONS ;
+select count(*),'= 10 ?','NOTATIONS' from NOTATIONS 
 union
-select count(*),'= 10 ?','GESTIONS' from GESTIONS ;
+select count(*),'= 10 ?','GESTIONS' from GESTIONS 
 union
-select count(*),'= 5 ?','FINANCEMENTS' from FINANCEMENTS ;
+select count(*),'= 5 ?','FINANCEMENTS' from FINANCEMENTS 
 union
-select count(*),'= 10 ?','ORGANISATIONS' from ORGANISATIONS ;
+select count(*),'= 10 ?','ORGANISATIONS' from ORGANISATIONS 
 union
-select count(*),'= 10 ?','ADHERENTS' from ADHERENTS ;
+select count(*),'= 10 ?','ADHERENTS' from ADHERENTS 
 union
-select count(*),'= 5 ?','FINANCEURS' from FINANCEURS ;
+select count(*),'= 5 ?','FINANCEURS' from FINANCEURS 
 union
-select count(*),'= 10 ?','EVENEMENTS' from EVENEMENTS ;
+select count(*),'= 10 ?','EVENEMENTS' from EVENEMENTS 
