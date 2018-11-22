@@ -211,10 +211,28 @@ commit ;
 --    verification des donnees
 -- ============================================================
 
-select count(*),'= 37 ?','ACTEUR' from ACTEUR 
+select count(*),'= 10 ?','ASSOCIATIONS' from ASSOCIATIONS 
 union
-select count(*),'= 20 ?','FILM' from FILM 
+select count(*),'= 10 ?','PERSONNES' from PERSONNES 
 union
-select count(*),'= 14 ?','REALISATEUR' from REALISATEUR 
+select count(*),'= 10 ?','ADHESIONS' from ADHESIONS 
 union
-select count(*),'= 40 ?','ROLE' from ROLE ;
+select count(*),'= 10 ?','NEWS' from NEWS ;
+union
+select count(*),'= 10 ?','COMMENTAIRES' from COMMENTAIRES ;
+union
+select count(*),'= 10 ?','PARTICIPATIONS' from PARTICIPATIONS ;
+union
+select count(*),'= 10 ?','NOTATIONS' from NOTATIONS ;
+union
+select count(*),'= 10 ?','GESTIONS' from GESTIONS ;
+union
+select count(*),'= 5 ?','FINANCEMENTS' from FINANCEMENTS ;
+union
+select count(*),'= 10 ?','ORGANISATIONS' from ORGANISATIONS ;
+union
+select count(*),'= 10 ?','ADHERENTS' from ADHERENTS ;
+union
+select count(*),'= 5 ?','FINANCEURS' from FINANCEURS ;
+union
+select count(*),'= 10 ?','EVENEMENTS' from EVENEMENTS ;
