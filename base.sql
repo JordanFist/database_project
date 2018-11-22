@@ -6,8 +6,7 @@
 
 drop table ROLE cascade constraints;
 
-<<<<<<< HEAD
-drop table ASSOCIATION cascade constraints;
+drop table ASSOCIATIONS cascade constraints;
 
 drop table PERSONNES cascade constraints;
 
@@ -251,23 +250,3 @@ alter table ORGANISATIONS
     add constraint fk2_organisations foreign key (NUMERO_ASSOCIATION)
        references ASSOCIATIONS (NUMERO_ASSOCIATION);
 
-=======
-drop table FILM cascade constraints;
-
-drop table REALISATEUR cascade constraints;
-
-drop table ACTEUR cascade constraints;
-
--- ============================================================
---   Table : ASSOCIATION                                            
--- ============================================================
-create table ASSOCIATION
-(
-    NUMERO_ACTEUR                   NUMBER(3)              not null,
-    NOM_ACTEUR                      CHAR(20)               not null,
-    PRENOM_ACTEUR                   CHAR(20)                       ,
-    NATION_ACTEUR                   CHAR(20)                       ,
-    DATE_DE_NAISSANCE               DATE                           ,
-    constraint pk_acteur primary key (NUMERO_ACTEUR)
-);
->>>>>>> 39620d327c651ced3aa9ed5ed13b6f1d093c5a2f
