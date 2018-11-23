@@ -67,8 +67,8 @@ create table PERSONNES
 create table ADHERENTS
 (
     NUMERO_ADHERENT		NUMBER(3)		not null,
+    NUMERO_PERSONNE		NUMBER(3)			,
     COTISATION_ADHERENT		NUMBER(3)		not null,
-    NUMERO_PERSONNE		CHAR(20)			,
     constraint pk_adherents primary key (NUMERO_ADHERENT)
 );
 

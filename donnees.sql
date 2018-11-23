@@ -84,16 +84,16 @@ commit ;
 
 -- ADHERENTS 
 
-insert into ADHERENTS values (  1  , 5  , 4);
-insert into ADHERENTS values (  2  , 5  , 3);
-insert into ADHERENTS values (  3  , 0  , 2);
-insert into ADHERENTS values (  4  , 5  , 1);
-insert into ADHERENTS values (  5  , 15 , 9);
-insert into ADHERENTS values (  6  , 15 , 8);
-insert into ADHERENTS values (  7  , 7  , 6);
+insert into ADHERENTS values (  1  , 4  , 5);
+insert into ADHERENTS values (  2  , 3  , 5);
+insert into ADHERENTS values (  3  , 2  , 10);
+insert into ADHERENTS values (  4  , 1  , 5);
+insert into ADHERENTS values (  5  , 9 , 15);
+insert into ADHERENTS values (  6  , 8 , 0);
+insert into ADHERENTS values (  7  , 6  , 7);
 insert into ADHERENTS values (  8  , 7  , 7);
-insert into ADHERENTS values (  9  , 20 , 10);
-insert into ADHERENTS values (  10 , 25 , 5);
+insert into ADHERENTS values (  9  , 10 , 20);
+insert into ADHERENTS values (  10 , 5 , 25);
 
 commit ;
 
