@@ -145,16 +145,16 @@ commit ;
 
 -- NOTATIONS
 
-insert into NOTATIONS values (  1 , 6  , 5 );
-insert into NOTATIONS values (  2 , 8  , 5 );
-insert into NOTATIONS values (  3 , 10 , 3 );
-insert into NOTATIONS values (  4 , 1  , 3 );
-insert into NOTATIONS values (  2 , 10 , 4 );
-insert into NOTATIONS values (  6 , 4  , 4 );
-insert into NOTATIONS values (  7 , 3  , 10);
-insert into NOTATIONS values (  8 , 2  , 2 );
-insert into NOTATIONS values (  9 , 5  , 2 );
-insert into NOTATIONS values ( 10 , 6  , 6 );
+insert into NOTATIONS values (  1 , 6  , 5 , 2);
+insert into NOTATIONS values (  2 , 8  , 5 , 5);
+insert into NOTATIONS values (  3 , 10 , 3 , 10);
+insert into NOTATIONS values (  4 , 1  , 3 , 15);
+insert into NOTATIONS values (  2 , 10 , 4 , 20);
+insert into NOTATIONS values (  6 , 4  , 4 , 18);
+insert into NOTATIONS values (  7 , 3  , 10 , 13);
+insert into NOTATIONS values (  8 , 2  , 2 , 14);
+insert into NOTATIONS values (  9 , 5  , 2 , 9);
+insert into NOTATIONS values ( 10 , 6  , 6 , 15);
 
 commit ;
 
