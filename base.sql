@@ -146,7 +146,7 @@ create table NOTATIONS
     NUMERO_EVENEMENT		NUMBER(3)		not null,
     NUMERO_ADHERENT		NUMBER(20)		not null,
     NUMERO_PERSONNE		NUMBER(3)		not null,
-    NOTE			NUMBER(2)		not null,
+    NOTE			NUMBER(2)		           ,
     constraint pk_notations primary key (NUMERO_EVENEMENT, NUMERO_ADHERENT, NUMERO_PERSONNE)
 );
 
