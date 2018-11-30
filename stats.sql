@@ -16,5 +16,9 @@ select TITRE, avg(NOTE) as "MOY" from NOTATIONS join EVENEMENTS on NOTATIONS.NUM
 
 select NOM_PERSONNE, count(*) as "NB_EVENEMENTS" from PARTICIPATIONS join PERSONNES on PARTICIPATIONS.NUMERO_PERSONNE = PERSONNES.NUMERO_PERSONNE group by NOM_PERSONNE order by NB_EVENEMENTS;
 
-/* classeement des finances des associations à une date donnée */
+/* classement des finances des associations à une date donnée */
 
+select NUMERO_FINANCEMENT, sum(MONTANT_FINANCEMENT) as "FINANCES" from FINANCEURS natural join FINANCEMENTS where DATE_FINANCEMENT < '30-JUN-17' group by NUMERO_FINANCEMENT order by FINANCES desc;
+
+
+select TITRE_NEWS, count(*) as "NB_COM" from NEWS join COMMENTAIRES on NEWS.NUMERO_NEWS = COMMENTAIRES.NUMERO_NEWS group by TITRE_NEWS;
