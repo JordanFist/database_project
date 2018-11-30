@@ -92,7 +92,7 @@ create table ADHESIONS
 create table NEWS
 (
     NUMERO_NEWS			NUMBER(3)		not null,
-    TITRE_NEWS			CHAR(30)		not null,
+     TITRE_NEWS			CHAR(30)		not null,
     TEXTE_NEWS			VARCHAR2(100)			,
     DATE_DE_CREATION_NEWS	DATE				,
     NUMERO_ADHERENT		CHAR(20)			,
