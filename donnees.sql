@@ -84,32 +84,32 @@ commit ;
 
 -- ADHERENTS 
 
-insert into ADHERENTS values (  1  , 4  , 5);
-insert into ADHERENTS values (  2  , 3  , 5);
-insert into ADHERENTS values (  3  , 2  , 10);
-insert into ADHERENTS values (  4  , 1  , 5);
-insert into ADHERENTS values (  5  , 9 , 15);
-insert into ADHERENTS values (  6  , 8 , 0);
-insert into ADHERENTS values (  7  , 6  , 7);
-insert into ADHERENTS values (  8  , 7  , 7);
-insert into ADHERENTS values (  9  , 10 , 20);
-insert into ADHERENTS values (  10 , 5 , 25);
+insert into ADHERENTS values (  1  , 4 );
+insert into ADHERENTS values (  2  , 3 );
+insert into ADHERENTS values (  3  , 2 );
+insert into ADHERENTS values (  4  , 1 );
+insert into ADHERENTS values (  5  , 9 );
+insert into ADHERENTS values (  6  , 8 );
+insert into ADHERENTS values (  7  , 6 );
+insert into ADHERENTS values (  8  , 7 );
+insert into ADHERENTS values (  9  , 10);
+insert into ADHERENTS values (  10 , 5 );
 
 commit ;
 
 
 -- ADHESIONS 
 
-insert into ADHESIONS values (  1 , 5 , '10-SEP-21', 'OUI' );
-insert into ADHESIONS values (  2 , 9 , '15-SEP-16', 'OUI' );
-insert into ADHESIONS values (  3 , 1 , '17-SEP-19', 'OUI' );
-insert into ADHESIONS values (  4 , 2 , '17-SEP-19', 'NON' );
-insert into ADHESIONS values (  5 , 10, '01-SEP-21', 'NON' );
-insert into ADHESIONS values (  6 , 5 , '02-SEP-16', 'NON' );
-insert into ADHESIONS values (  7 , 7 , '09-SEP-20', 'OUI' );
-insert into ADHESIONS values (  8 , 6 , '14-SEP-19', 'NON' );
-insert into ADHESIONS values (  9 , 4 , '29-SEP-21', 'NON' );
-insert into ADHESIONS values ( 10 , 4 , '21-SEP-16', 'OUI' );
+insert into ADHESIONS values (  1 , 5 , 5, '10-SEP-21', 'OUI' );
+insert into ADHESIONS values (  2 , 9 , 5, '15-SEP-16', 'OUI' );
+insert into ADHESIONS values (  3 , 1 , 10, '17-SEP-19', 'OUI' );
+insert into ADHESIONS values (  4 , 2 , 5, '17-SEP-19', 'NON' );
+insert into ADHESIONS values (  5 , 10, 15, '01-SEP-21', 'NON' );
+insert into ADHESIONS values (  6 , 5 , 0, '02-SEP-16', 'NON' );
+insert into ADHESIONS values (  7 , 7 , 7, '09-SEP-20', 'OUI' );
+insert into ADHESIONS values (  8 , 6 , 7, '14-SEP-19', 'NON' );
+insert into ADHESIONS values (  9 , 4 , 20, '29-SEP-21', 'NON' );
+insert into ADHESIONS values ( 10 , 4 , 25, '21-SEP-16', 'OUI' );
 
 commit ;
 
@@ -130,16 +130,16 @@ commit ;
 
 -- COMMENTAIRES 
 
-insert into COMMENTAIRES values (  1 , 6  );
-insert into COMMENTAIRES values (  2 , 8  );
-insert into COMMENTAIRES values (  3 , 10 );
-insert into COMMENTAIRES values (  4 , 1  );
-insert into COMMENTAIRES values (  5 , 10 );
-insert into COMMENTAIRES values (  6 , 4  );
-insert into COMMENTAIRES values (  7 , 3  );
-insert into COMMENTAIRES values (  8 , 2  );
-insert into COMMENTAIRES values (  9 , 5  );
-insert into COMMENTAIRES values ( 10 , 6  );
+insert into COMMENTAIRES values (  1 , 6 ,'GENIAL' );
+insert into COMMENTAIRES values (  2 , 8 , 'TROP COURT');
+insert into COMMENTAIRES values (  3 , 10 , 'SYMPAS');
+insert into COMMENTAIRES values (  4 , 1  , 'NUL');
+insert into COMMENTAIRES values (  5 , 10 , 'JE ME SUIS BIEN AMUSE');
+insert into COMMENTAIRES values (  6 , 4  , 'FATIGANT');
+insert into COMMENTAIRES values (  7 , 3  , 'ENFIN');
+insert into COMMENTAIRES values (  8 , 2  , 'HOURRA');
+insert into COMMENTAIRES values (  9 , 5  , 'POURQUOI PAS');
+insert into COMMENTAIRES values ( 10 , 6  , 'SERIEUX?');
 
 commit ;
 
@@ -200,11 +200,11 @@ commit ;
 
 -- FINANCEMENTS 
 
-insert into FINANCEMENTS values (  1 , 1  );
-insert into FINANCEMENTS values (  2 , 2  );
-insert into FINANCEMENTS values (  3 , 2  );
-insert into FINANCEMENTS values (  4 , 1  );
-insert into FINANCEMENTS values (  5 , 4  );
+insert into FINANCEMENTS values (  1 , 1 , '20-JAN-16', 1005);
+insert into FINANCEMENTS values (  2 , 2 , '10-SEP-15', 390);
+insert into FINANCEMENTS values (  3 , 2 , '30-JUN-17', 2480);
+insert into FINANCEMENTS values (  4 , 1 , '2-DEC-16', 1900);
+insert into FINANCEMENTS values (  5 , 4 , '7-MAR-17', 150);
 
 commit ;
 

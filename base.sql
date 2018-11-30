@@ -68,7 +68,6 @@ create table ADHERENTS
 (
     NUMERO_ADHERENT		NUMBER(3)		not null,
     NUMERO_PERSONNE		NUMBER(3)			,
-    COTISATION_ADHERENT		NUMBER(3)		not null,
     constraint pk_adherents primary key (NUMERO_ADHERENT)
 );
 
@@ -80,6 +79,7 @@ create table ADHESIONS
 (
     NUMERO_ADHERENT		NUMBER(3)		not null,
     NUMERO_ASSOCIATION		NUMBER(3)		not null,
+    COTISATION_ADHERENT		NUMBER(3)		        ,
     DATE_ADHESION		DATE			        ,
     ETRE_AU_BUREAU		CHAR(3)	         	        ,
     constraint pk_adhesions primary key (NUMERO_ADHERENT, NUMERO_ASSOCIATION)
@@ -122,6 +122,8 @@ create table FINANCEMENTS
 (
     NUMERO_FINANCEMENT		NUMBER(3)		not null,
     NUMERO_ASSOCIATION		NUMBER(3)		not null,
+    DATE_FINANCEMENT		DATE			not null,
+    MONTANT_FINANCEMENT		NUMBER(5)			,
     constraint pk_financements primary key (NUMERO_FINANCEMENT, NUMERO_ASSOCIATION)
 );
 
@@ -146,7 +148,7 @@ create table NOTATIONS
     NUMERO_EVENEMENT		NUMBER(3)		not null,
     NUMERO_ADHERENT		NUMBER(20)		not null,
     NUMERO_PERSONNE		NUMBER(3)		not null,
-    NOTE			NUMBER(2)		           ,
+    NOTE			NUMBER(2)		        ,
     constraint pk_notations primary key (NUMERO_EVENEMENT, NUMERO_ADHERENT, NUMERO_PERSONNE)
 );
 
@@ -158,6 +160,7 @@ create table COMMENTAIRES
 (
     NUMERO_ADHERENT		NUMBER(3)		not null,
     NUMERO_NEWS 		NUMBER(3)		not null,
+    COMMENTAIRE			CHAR(20)			,
     constraint pk_commentaires primary key (NUMERO_ADHERENT, NUMERO_NEWS)
 );
 
