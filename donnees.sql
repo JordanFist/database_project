@@ -101,30 +101,30 @@ commit ;
 -- ADHESIONS 
 
 insert into ADHESIONS values (  1 , 5 , 5, '10-SEP-21', 'OUI' );
-insert into ADHESIONS values (  2 , 9 , 5, '15-SEP-16', 'OUI' );
+insert into ADHESIONS values (  2 , 9 , 10, '15-SEP-16', 'OUI' );
 insert into ADHESIONS values (  3 , 1 , 10, '17-SEP-19', 'OUI' );
 insert into ADHESIONS values (  4 , 2 , 5, '17-SEP-19', 'NON' );
 insert into ADHESIONS values (  5 , 10, 15, '01-SEP-21', 'NON' );
 insert into ADHESIONS values (  6 , 5 , 0, '02-SEP-16', 'NON' );
 insert into ADHESIONS values (  7 , 7 , 7, '09-SEP-20', 'OUI' );
 insert into ADHESIONS values (  8 , 6 , 7, '14-SEP-19', 'NON' );
-insert into ADHESIONS values (  9 , 4 , 20, '29-SEP-21', 'NON' );
+insert into ADHESIONS values (  9 , 1 , 0, '29-SEP-21', 'NON' );
 insert into ADHESIONS values ( 10 , 4 , 25, '21-SEP-16', 'OUI' );
 
 commit ;
 
 -- NEWS 
 
-insert into NEWS values (  1 , 'PREZ VIRE' , 'LE PREZ EST MORT', '22-MAY-15', 5 );
-insert into NEWS values (  2 , 'NOUVEAU PREZ' , 'REMPLACEMENT RAPIDE', '23-MAY-15', 10 );
-insert into NEWS values (  3 , 'NOUVEAU BUREAU' , 'CHANGEMENT DE TOUT LE BUREAU', '24-MAY-15', 5 );
-insert into NEWS values (  4 , 'VOL DE LA TRESORERIE' , 'LE PREZ SE BARRE AVEC LARGENT', '31-MAY-15', 4 );
-insert into NEWS values (  5 , 'NOUVEAU PREZ' , 'ELU ALEATOIREMENT', '1-JUN-15', 6 );
-insert into NEWS values (  6 , 'INEFFICACITE' , 'LASSOCIATION DEVIENT NULLE', '10-JUN-15', 1 );
-insert into NEWS values (  7 , 'COUP DETAT' , 'LE PREZ SE FAIT DECAPITER', '13-JUN-15', 10 );
-insert into NEWS values (  8 , 'REGIME DEMOCRATIQUE' , 'DEMOCRATIE OUI', '27-JUN-15', 1 );
-insert into NEWS values (  9 , 'NAISSANCE' , 'LE PREZ A UN FILS', '24-JAN-16', 7 );
-insert into NEWS values ( 10 , 'ACCIDENT DE TRAIN' , 'LE PREZ EST MORT', '22-MAY-15', 2 );
+insert into NEWS values (  1 , 5, 'PREZ VIRE' , 'LE PREZ EST MORT', '22-MAY-15');
+insert into NEWS values (  2 , 10, 'NOUVEAU PREZ' , 'REMPLACEMENT RAPIDE', '23-MAY-15');
+insert into NEWS values (  3 , 5, 'NOUVEAU BUREAU' , 'CHANGEMENT DE TOUT LE BUREAU', '24-MAY-15');
+insert into NEWS values (  4 , 4, 'VOL DE LA TRESORERIE' , 'LE PREZ SE BARRE AVEC LARGENT', '31-MAY-15');
+insert into NEWS values (  5 , 6, 'NOUVEAU PREZ' , 'ELU ALEATOIREMENT', '1-JUN-15');
+insert into NEWS values (  6 , 1, 'INEFFICACITE' , 'LASSOCIATION DEVIENT NULLE', '10-JUN-15');
+insert into NEWS values (  7 , 10, 'COUP DETAT' , 'LE PREZ SE FAIT DECAPITER', '13-JUN-15');
+insert into NEWS values (  8 , 1, 'REGIME DEMOCRATIQUE' , 'DEMOCRATIE OUI', '27-JUN-15');
+insert into NEWS values (  9 , 7, 'NAISSANCE' , 'LE PREZ A UN FILS', '24-JAN-16');
+insert into NEWS values ( 10 , 2, 'ACCIDENT DE TRAIN' , 'LE PREZ EST MORT', '22-MAY-15');
 
 commit ;
 
@@ -134,7 +134,7 @@ insert into COMMENTAIRES values (  1 , 6 ,'GENIAL' );
 insert into COMMENTAIRES values (  2 , 8 , 'TROP COURT');
 insert into COMMENTAIRES values (  3 , 10 , 'SYMPAS');
 insert into COMMENTAIRES values (  4 , 1  , 'NUL');
-insert into COMMENTAIRES values (  5 , 10 , 'JE ME SUIS BIEN AMUSE');
+insert into COMMENTAIRES values (  5 , 7 , 'JE ME SUIS BIEN AMUSE');
 insert into COMMENTAIRES values (  6 , 4  , 'FATIGANT');
 insert into COMMENTAIRES values (  7 , 3  , 'ENFIN');
 insert into COMMENTAIRES values (  8 , 2  , 'HOURRA');
