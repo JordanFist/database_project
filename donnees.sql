@@ -205,7 +205,6 @@ insert into FINANCEMENTS values (  2 , 2 , '10-SEP-15', 390);
 insert into FINANCEMENTS values (  3 , 2 , '30-JUN-17', 2480);
 insert into FINANCEMENTS values (  4 , 1 , '2-DEC-16', 1900);
 insert into FINANCEMENTS values (  5 , 4 , '7-MAR-17', 150);
-
 commit ;
 
 -- ============================================================
