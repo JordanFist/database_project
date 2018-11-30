@@ -160,7 +160,7 @@ create table COMMENTAIRES
 (
     NUMERO_ADHERENT		NUMBER(3)		not null,
     NUMERO_NEWS 		NUMBER(3)		not null,
-    COMMENTAIRE			CHAR(20)			,
+    COMMENTAIRE			CHAR(200)			,
     constraint pk_commentaires primary key (NUMERO_ADHERENT, NUMERO_NEWS)
 );
 
