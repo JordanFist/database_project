@@ -19,8 +19,7 @@ natural join ADHERENTS natural join GESTIONS natural join EVENEMENTS
 where TITRE = 'OLINP';
 
 --4. Savoir le nombre de commentaires postés pour une news
---TOFIX
-select TITRE_NEWS, count(NUMERO_ADHERENT) as NOMBRE
-from NEWS N
-join COMMENTAIRES on N.NUMERO_NEWS = COMMENTAIRES.NUMERO_NEWS group by TITRE_NEWS;
+select TITRE_NEWS, count(*) as NOMBRE
+from NEWS
+join COMMENTAIRES on NEWS.NUMERO_NEWS = COMMENTAIRES.NUMERO_NEWS group by TITRE_NEWS;
 
