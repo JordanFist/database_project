@@ -95,8 +95,7 @@ create table NEWS
     NUMERO_ADHERENT		NUMBER(3)			,
     TITRE_NEWS			CHAR(30)		not null,
     TEXTE_NEWS			VARCHAR2(100)			,
-    DATE_DE_CREATION_NEWS	DATE				,
-    
+    DATE_DE_CREATION_NEWS	DATE				,    
     constraint pk_news primary key (NUMERO_NEWS)
 );
 
