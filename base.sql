@@ -99,8 +99,7 @@ create table NEWS
     TITRE_NEWS			CHAR(30)		not null,
 >>>>>>> 79641de59199b01272cd4d0c70df19531e79dbc0
     TEXTE_NEWS			VARCHAR2(100)			,
-    DATE_DE_CREATION_NEWS	DATE				,
-    
+    DATE_DE_CREATION_NEWS	DATE				,    
     constraint pk_news primary key (NUMERO_NEWS)
 );
 
