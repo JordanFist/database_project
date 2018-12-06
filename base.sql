@@ -92,12 +92,8 @@ create table ADHESIONS
 create table NEWS
 (
     NUMERO_NEWS			NUMBER(3)		not null,
-<<<<<<< HEAD
-     TITRE_NEWS			CHAR(30)		not null,
-=======
     NUMERO_ADHERENT		NUMBER(3)			,
     TITRE_NEWS			CHAR(30)		not null,
->>>>>>> 79641de59199b01272cd4d0c70df19531e79dbc0
     TEXTE_NEWS			VARCHAR2(100)			,
     DATE_DE_CREATION_NEWS	DATE				,    
     constraint pk_news primary key (NUMERO_NEWS)
