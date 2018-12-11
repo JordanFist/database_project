@@ -1,13 +1,22 @@
 import java.sql.*;
 import oracle.jdbc.pool.OracleDataSource;
-import java.util.concurrent.ExecutionException;
 
 public class Statistiques {
     public OracleDataSource ods;
     public Connection conn;
     public Statement stmt;
 
-    public Statistiques() {
+    void openBase() {
+        try {
+            ods = new OracleDataSource();
+            ods.setUser("jsandri");
+            ods.setPassword("jsandri");
+            ods.setURL("jdbc:oracle:thin:@localhost:1521/oracle");
+
+            conn = null;
+            stmt = null;
+        } catch (Exception e) {
+        }
     }
 
     void closeBase() {
@@ -23,13 +32,7 @@ public class Statistiques {
     }
 
     void choix1() throws SQLException, ClassNotFoundException, java.io.IOException {
-        ods = new OracleDataSource();
-        ods.setUser("jsandri");
-        ods.setPassword("jsandri");
-        ods.setURL("jdbc:oracle:thin:@localhost:1521/oracle");
-
-        conn = null;
-        stmt = null;
+        openBase();
 
 	ResultSet rset = null;
 
@@ -39,7 +42,7 @@ public class Statistiques {
             rset = stmt.executeQuery("select count(*) /(select count(*) from NEWS) from COMMENTAIRES group by ()");
 
             while (rset.next()) { // Affichage du resultat.
-		System.out.println(rset.getString(2) + rset.getString(1));
+		System.out.println(rset.getString(1));
             }
         } finally {
             closeBase();
@@ -48,13 +51,7 @@ public class Statistiques {
 
 
     void choix2(String evenement) throws SQLException, ClassNotFoundException, java.io.IOException {
-        ods = new OracleDataSource();
-        ods.setUser("jsandri");
-        ods.setPassword("jsandri");
-        ods.setURL("jdbc:oracle:thin:@localhost:1521/oracle");
-
-        conn = null;
-        stmt = null;
+        openBase();
 
 	ResultSet rset = null;
 
@@ -73,13 +70,7 @@ public class Statistiques {
 
 
     void choix3() throws SQLException, ClassNotFoundException, java.io.IOException {
-        ods = new OracleDataSource();
-        ods.setUser("jsandri");
-        ods.setPassword("jsandri");
-        ods.setURL("jdbc:oracle:thin:@localhost:1521/oracle");
-
-        conn = null;
-        stmt = null;
+        openBase();
 
 	ResultSet rset = null;
 
@@ -98,13 +89,7 @@ public class Statistiques {
 
 
     void choix4() throws SQLException, ClassNotFoundException, java.io.IOException {
-        ods = new OracleDataSource();
-        ods.setUser("jsandri");
-        ods.setPassword("jsandri");
-        ods.setURL("jdbc:oracle:thin:@localhost:1521/oracle");
-
-        conn = null;
-        stmt = null;
+        openBase();
 
 	ResultSet rset = null;
 
@@ -123,20 +108,14 @@ public class Statistiques {
 
 
     void choix5(String assosciation, String date) throws SQLException, ClassNotFoundException, java.io.IOException {
-        ods = new OracleDataSource();
-        ods.setUser("jsandri");
-        ods.setPassword("jsandri");
-        ods.setURL("jdbc:oracle:thin:@localhost:1521/oracle");
-
-        conn = null;
-        stmt = null;
+        openBase();
 
 	ResultSet rset = null;
 
         try {
             conn = ods.getConnection();
             stmt = conn.createStatement();
-            rset = stmt.executeQuery("select NUMERO_FINANCEMENT, sum(MONTANT_FINANCEMENT) as \"FINANCES\" from FINANCEURS natural join FINANCEMENTS natural join ASSOCIATIONS where DATE_FINANCEMENT < '" + date + "' group by NUMERO_FINANCEMENT order by FINANCES desc");
+            rset = stmt.executeQuery("select NUMERO_FINANCEMENT, sum(MONTANT_FINANCEMENT) as \"FINANCES\" from FINANCEURS natural join FINANCEMENTS natural join ASSOCIATIONS where DATE_FINANCEMENT < '" + date +"' group by NUMERO_FINANCEMENT order by FINANCES desc");
 
             while (rset.next()) { // Affichage du resultat.
 		System.out.println(rset.getString(2));
