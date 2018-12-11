@@ -5,7 +5,7 @@ src:
 
 run: src
 	clear
-	cd build; java InterfaceSQL
+	@cd build; java InterfaceSQL
 
 clean:
 	rm -f build/*
