@@ -123,7 +123,7 @@ public class InterfaceSQL {
 
 	void statistiques() {
 		System.out.println("\nVoici les types de statistiques disponibles");
-		System.out.println("1. Moyenne des commentaires pour une news");
+		System.out.println("1. Moyenne des commentaires pour toutes les news");
 		System.out.println("2. Moyenne des notes par les participants à un événement");
 		System.out.println("3. Classement des événements par notes données par les participants");
 		System.out.println("4. Classement des adhérents participant le plus aux événements");
@@ -133,10 +133,8 @@ public class InterfaceSQL {
 		String reponse = sc.nextLine();
 		String date;
 		if (reponse.equals("1")) {
-			System.out.println("\nPour quelle news ?");
-			reponse = sc.nextLine();
 			try {
-				statistiques.choix1(reponse);
+				statistiques.choix1();
 			} catch (Exception e) {
 				erreur();
 			}
