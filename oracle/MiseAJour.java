@@ -212,13 +212,16 @@ public class MiseAJour {
             stmt = conn.createStatement();
             rset = stmt.executeQuery(
                     "delete from ADHESIONS where NUMERO_ASSOCIATION in (select NUMERO_ASSOCIATION from ASSOCIATIONS where NUMERO_ASSOCIATION = " 
-                            + numeroAssociation);
-            rset = stmt.executeQuery("delete from FINANCEMENTS where NUMERO_ASSOCIATION in (select NUMERO_ASSOCIATION from ASSOCIATIONS where NUMERO_ASSOCIATION = " 
-            + numeroAssociation);
+                            + numeroAssociation + ")";
+            rset = stmt.executeQuery(
+                    "delete from FINANCEMENTS where NUMERO_ASSOCIATION in (select NUMERO_ASSOCIATION from ASSOCIATIONS where NUMERO_ASSOCIATION = " 
+                            + numeroAssociation + ")");
             
             rset = stmt.executeQuery(
                     "delete from ORGANISATIONS where NUMERO_ASSOCIATION in (select NUMERO_ASSOCIATION from ASSOCIATIONS where NUMERO_ASSOCIATION = " 
-                            + numeroAssociation);
+                            + numeroAssociation + ")");
+            rset = stmt.executeQuery(
+                    "delete from ASSOCIATIONS where NUMERO_ASSOCIATION = " + numeroAssociation);
         } finally {
             System.out.println("\nsupprimé");
             closeBase();
