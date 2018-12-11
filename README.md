@@ -20,3 +20,5 @@ Vous retrouvez les commandes de statistiques, de consultations et de mises à jo
 Interface graphique 
 --------------------
 
+Nous retrouvons 2 types d'interfaces celle avec mysql et celle avec oracle dans les dossiers respectifs
+
