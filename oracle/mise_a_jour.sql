@@ -87,7 +87,31 @@ set COUT = COUT + 1;
 insert into ASSOCIATIONS (NUMERO_ASSOCIATION, NOM_ASSOCIATION, DATE_DE_CREATION, DESCRIPTION)
 values (11, 'GCC', '22-JAN-16', 'Blablabla');
 
--- Suppresion d'une association   TOFIX
+-- Suppresion d'une association 
+
+delete from ADHESIONS
+where NUMERO_ASSOCIATION in (
+    select NUMERO_ASSOCIATION
+    from ASSOCIATIONS
+    where NOM_ASSOCIATION = 'BDE'
+);
+
+delete from FINANCEMENTS
+where NUMERO_ASSOCIATION in (
+    select NUMERO_ASSOCIATION
+    from ASSOCIATIONS
+    where NOM_ASSOCIATION = 'BDE'
+);
+
+delete from ORGANISATIONS
+where NUMERO_ASSOCIATION in (
+    select NUMERO_ASSOCIATION
+    from ASSOCIATIONS
+    where NOM_ASSOCIATION = 'BDE'
+);
+
+delete from ASSOCIATIONS
+where NOM_ASSOCIATION = 'BDE';
 
 
 -- Modification d'une association
