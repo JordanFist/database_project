@@ -2,26 +2,23 @@
 README
 -------
 
-**Membres du projet :** 
+**Project members :** 
 - Sarah Peris
 - Terence
 - Jordan Sandri
 
-Projet choisi
---------------
+Our project
+------------
 
-La base de données concerne la gestion des associations à l'enseirb-matmeca.
+Our database handles students and clubs of our engineering school.
 
-Les Commandes classiques
--------------------------
+Commands
+---------
 
-Vous retrouvez les commandes de statistiques, de consultations et de mises à jour classiques dans les fichiers *statistiques.sql*, *consultations.sql* et *mise_a_jour.sql*.
+Explanation about commands can be found in the following files: *statistiques.sql*, *consultations.sql* et *mise_a_jour.sql*.
 
-Interface graphique 
+Graphical interface
 --------------------
 
-Nous retrouvons 2 types d'interfaces celle avec mysql et celle avec oracle dans les dossiers respectifs.
-Pour lancer l'interface oracle : faire un ssh oracle puis après avoir exporté la variable faire make dans le répertoire oracle
-
-
-
+There are 2 types of interface: One for MySQL and one for Oracle in the respective directories.
+To run the Oracle interface: Do an ssh Oracle, export the variable and then type make in the Oracle repository
