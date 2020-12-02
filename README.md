@@ -1,6 +1,6 @@
 
 README
--------
+------- 
 
 **Project members :** 
 - Sarah Peris
